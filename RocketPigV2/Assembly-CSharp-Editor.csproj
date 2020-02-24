@@ -68,43 +68,43 @@
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.111.0.txt" />
      <None Include="Assets\Extensions\GooglePlayGames\Editor\m2repository\com\google\games\gpgs-plugin-support\maven-metadata.xml" />
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>D:/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -301,20 +301,20 @@
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>D:/2019.2.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="Google.VersionHandler">
- <HintPath>D:/RocketPig/RocketPigV2/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
- </Reference>
  <Reference Include="Google.IOSResolver_v1.2.111.0">
- <HintPath>D:/RocketPig/RocketPigV2/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.111.0.dll</HintPath>
- </Reference>
- <Reference Include="Google.VersionHandlerImpl_v1.2.111.0">
- <HintPath>D:/RocketPig/RocketPigV2/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.111.0.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.111.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver_v1.2.111.0">
- <HintPath>D:/RocketPig/RocketPigV2/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.111.0.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.111.0.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.VersionHandler">
+ <HintPath>D:/RocketPigV2/RocketPigV2/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.VersionHandlerImpl_v1.2.111.0">
+ <HintPath>D:/RocketPigV2/RocketPigV2/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.111.0.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/RocketPig/RocketPigV2/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/2019.2.17f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

@@ -96,7 +96,7 @@ public class RocketPig : MonoBehaviour
 		//final scores on gameover screen
 		//starsFinal.text = PlayGameScene.starCounter.ToString ("00");
 		//fuelFinal.text = PlayGameScene.fuelCounter.ToString ("00");
-		totalCounter.text = (PlayGameScene.fuelCounter + PlayGameScene.starCounter).ToString ("00") ;
+		totalCounter.text = PlayGameScene.fuelCounter.ToString ("00") ;
 			
 
 
@@ -119,7 +119,7 @@ public class RocketPig : MonoBehaviour
 			Destroy (col.gameObject);
 			PlayGameScene.starCounter += 1;
 			PlayGameScene.fuelCounter += 1;
-			MainMenuOptions.starCaught.Play ();
+			PlayPageOptions.starCaught.Play ();
 
 		}
 		if (col.gameObject.name == "powerup(Clone)") {

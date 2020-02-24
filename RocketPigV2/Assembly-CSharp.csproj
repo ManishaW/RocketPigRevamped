@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\AnimationScript.cs" />
      <Compile Include="Assets\Extensions\CloudOnce\Data\Achievements.cs" />
      <Compile Include="Assets\Extensions\CloudOnce\Data\CloudIDs.cs" />
      <Compile Include="Assets\Extensions\CloudOnce\Data\CloudPrefs\CloudBool.cs" />
@@ -291,8 +292,10 @@
      <Compile Include="Assets\Extensions\GooglePlayGames\Platforms\PlayGamesClientFactory.cs" />
      <Compile Include="Assets\Extensions\GooglePlayGames\Platforms\TokenClient.cs" />
      <Compile Include="Assets\Extensions\GooglePlayGames\PluginVersion.cs" />
+     <Compile Include="Assets\PlayPageOptions.cs" />
      <Compile Include="Assets\Scripts\cameraScreenSpace.cs" />
      <Compile Include="Assets\Scripts\CometFall.cs" />
+     <Compile Include="Assets\Scripts\DestroyOnExit.cs" />
      <Compile Include="Assets\Scripts\FBHolder.cs" />
      <Compile Include="Assets\Scripts\FuelBarScript.cs" />
      <Compile Include="Assets\Scripts\GameOverAnimations.cs" />
@@ -307,50 +310,68 @@
      <Compile Include="Assets\Scripts\ScrollSky.cs" />
      <Compile Include="Assets\Scripts\ShareApp.cs" />
      <Compile Include="Assets\Scripts\StarFall.cs" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\CloudVariablesTemplate.cs.txt" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\LeaderboardsTemplate.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\CloudIDsPropertyTemplate.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\CloudIDsTemplate.cs.txt" />
      <None Include="Assets\Extensions\CloudOnce\readme.txt" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\LeaderboardsPropertyTemplate.cs.txt" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\CloudVariablesPropertyTemplate.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\AndroidManifestTemplate.xml" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\AchievementsTemplate.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Extensions\GooglePlayGames\Plugins\Android\GooglePlayGamesManifest.plugin\AndroidManifest.xml" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\AchievementsPropertyTemplate.cs.txt" />
      <None Include="Assets\Extensions\CloudOnce\link.xml" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/RocketPig/RocketPigV2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/RocketPigV2/RocketPigV2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>D:/2019.2.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

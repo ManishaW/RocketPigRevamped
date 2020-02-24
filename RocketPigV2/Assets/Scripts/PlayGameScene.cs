@@ -57,8 +57,8 @@ public class PlayGameScene : MonoBehaviour
 		starCounterScore.text = (starCounter).ToString ("00");
 		fuelCounterScore.text = (fuelCounter).ToString ("00");
 		//do the 3 second countdown timer
-		Debug.Log("countdown: " + CountdownTimer);
-		Debug.Log ("time: " + Time.deltaTime);
+		// Debug.Log("countdown: " + CountdownTimer);
+		// Debug.Log ("time: " + Time.deltaTime);
 		if (CountdownTimer>0 && startCountdownTrigger==true) {
 			CountdownTimer = CountdownTimer - Time.deltaTime;
 			string displayTime = CountdownTimer.ToString ("0");
