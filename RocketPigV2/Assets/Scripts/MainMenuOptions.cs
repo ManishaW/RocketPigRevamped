@@ -112,7 +112,7 @@ public class MainMenuOptions : MonoBehaviour
 	{
 		Debug.Log ("close settings menu clicked");
 		settingsMenu.SetActive(false);
-		soundClick.Play();
+		// soundClick.Play();
 		m_Animator.SetTrigger("postAppear");
 		signDisappearSound.Play();
 	}
