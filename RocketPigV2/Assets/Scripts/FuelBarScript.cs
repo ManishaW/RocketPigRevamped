@@ -10,7 +10,7 @@ public class FuelBarScript : MonoBehaviour
 	private Image content;
 	public static bool fuelout;
 	public float fuelstart;
-	public float fuelPresent;
+	public static float fuelPresent=0;
 	public GameObject myAnimator;
 	public Animation clip;
 	float amount;
@@ -37,18 +37,19 @@ public class FuelBarScript : MonoBehaviour
 			fuelPresent = fuelstart/50 - ((Time.time-PlayGameScene.startTime)/50) ;
 
 			content.fillAmount = fuelPresent;
-			Debug.Log ("fuel running out " + fuelPresent );
+			// Debug.Log ("fuel running out " + fuelPresent );
 
-			if (fuelPresent <= 0.2f) {
-//				//call animation
-				MainMenuOptions.fuelWarning.Play();
-				// Debug.Log ("play warning"+clip.name);
-				// clip.Play ();
-			}
+// 			if (fuelPresent <= 1f) {
+// //				//call animation
+// 				MainMenuOptions.fuelWarning.Play();
+// 				// Debug.Log ("play warning"+clip.name);
+// 				// clip.Play ();
+// 			}
 			//fuel is out!
-			if (fuelPresent <= 0) {
+			if (fuelPresent <= 0.05f) {
 				//Debug.Log ("fuel out! " + fuelPresent );				
-				fuelout = true;
+				// fuelout = true;
+				RocketPig.die=true;
 
 			}
 

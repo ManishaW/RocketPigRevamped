@@ -17,7 +17,7 @@ public class GameOverOptions : MonoBehaviour {
 
 	public void restartOnClick ()
 	{
-		SceneManager.LoadScene("Play page");
+		SceneManager.LoadScene("NewPlayPage");
 		RocketPig.die = false;
 		PlayGameScene.blastOffTriggered = false;
 	}

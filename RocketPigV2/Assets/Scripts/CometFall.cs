@@ -8,7 +8,7 @@ public class CometFall : MonoBehaviour
 	public GameObject newComet;
 
 	void Start(){
-		float randoTime = Random.Range (0.7f, 1.8f);
+		float randoTime = Random.Range (0.3f, 1f);
 		InvokeRepeating ("makeComet", 2f, randoTime);
 
 	}
@@ -16,9 +16,9 @@ public class CometFall : MonoBehaviour
 		if (RocketPig.die == false && PlayGameScene.fuelCounter>0 && PlayGameScene.blastOffTriggered) {
 			//Debug.Log ("Create comet");
 			Vector3 position = new Vector3 (Random.Range (-350, 350), 800, 30);
-			comet.GetComponent<Rigidbody2D>().gravityScale = Random.Range (10, 20);
+			comet.GetComponent<Rigidbody2D>().gravityScale = Random.Range (10, 13);
 			comet.transform.localScale= new Vector3 (1,1,0);
-			float scale = Random.Range(-0.5f,0.5f);
+			float scale = Random.Range(0f,0.5f);
 			comet.transform.localScale += new Vector3 (scale, scale, 0);
 		
 			newComet = Instantiate (comet, position, Quaternion.identity) as GameObject;

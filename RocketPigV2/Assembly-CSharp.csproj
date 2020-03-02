@@ -292,6 +292,7 @@
      <Compile Include="Assets\Extensions\GooglePlayGames\Platforms\PlayGamesClientFactory.cs" />
      <Compile Include="Assets\Extensions\GooglePlayGames\Platforms\TokenClient.cs" />
      <Compile Include="Assets\Extensions\GooglePlayGames\PluginVersion.cs" />
+     <Compile Include="Assets\LaunchLeverScript.cs" />
      <Compile Include="Assets\PlayPageOptions.cs" />
      <Compile Include="Assets\Scripts\cameraScreenSpace.cs" />
      <Compile Include="Assets\Scripts\CometFall.cs" />
@@ -310,6 +311,7 @@
      <Compile Include="Assets\Scripts\ScrollSky.cs" />
      <Compile Include="Assets\Scripts\ShareApp.cs" />
      <Compile Include="Assets\Scripts\StarFall.cs" />
+     <Compile Include="Assets\StoreOptionsScript.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Extensions\CloudOnce\Internal\Data\Templates\CloudVariablesTemplate.cs.txt" />
