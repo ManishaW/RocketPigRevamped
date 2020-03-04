@@ -66,9 +66,9 @@ public class PlayGameScene : MonoBehaviour
 
 
         //countdown is 0 and pig is not flying yet
-        if (countdownText.text.Equals("0") && blastOffTriggered == false && LaunchLeverScript.launchedLeverPulled == true)
+        if (countdownText.text.Equals("0") && blastOffTriggered == false )
         {
-            countdownText.text = "Blast off!";
+            countdownText.text = "BLAST OFF!";
             ScrollSky.speed = 0.8f;
             leftFinger.gameObject.SetActive(false);
             rightFinger.gameObject.SetActive(false);
@@ -78,23 +78,14 @@ public class PlayGameScene : MonoBehaviour
             Invoke("blastOff", 1.5f);
 
         }
-        else if (countdownText.text.Equals("0") && blastOffTriggered == false && LaunchLeverScript.launchedLeverPulled == false)
-        {
-            RocketPig.die = true;
-            leftFinger.gameObject.SetActive(false);
-            rightFinger.gameObject.SetActive(false);
-            countdownText.text = "";
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape)){
-            Application.Quit();
-		}
+        
 
     }
 
     //left tap
     public void clickLeftFinger()
     {
+		Debug.Log("hit left");
         if (leftFinger.interactable == true)
         {
             fuelCounter += 1;
@@ -110,6 +101,8 @@ public class PlayGameScene : MonoBehaviour
     //right tap
     public void clickRightFinger()
     {
+		Debug.Log("hit rightt");
+
         if (rightFinger.interactable == true)
         {
             fuelCounter += 1;

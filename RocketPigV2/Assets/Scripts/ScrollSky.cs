@@ -15,6 +15,7 @@ public class ScrollSky : MonoBehaviour {
 		// while the pig is flying and not dead
 		if (PlayGameScene.blastOffTriggered == true && RocketPig.die==false) {
 			//speed that sky is scrolling
+			speed=0.5f;
 			Vector2 bgPos = new Vector2 (0, Time.time * speed);
 			GetComponent<Renderer> ().material.mainTextureOffset = bgPos;
 

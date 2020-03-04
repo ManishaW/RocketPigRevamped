@@ -44,7 +44,7 @@ public class MainMenuOptions : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == ("Play page"))
         {
-            BGM.Stop();
+            // BGM.Stop();
             // playGameMusic.Loop();
             // playGameMusic.Play ();
         }
@@ -68,17 +68,14 @@ public class MainMenuOptions : MonoBehaviour
         BGM.Stop();
         // playGameMusic.Play();
         // rocketLauncherBuild.Play();
-        // waitXseconds(2.0f);
-        SceneManager.LoadScene("NewPlayPage");
-
+ 		Invoke("goToLaunchScene", 1.2f);
 
 
     }
-    IEnumerator waitXseconds(float duration)
-    {
-        yield return new WaitForSeconds(duration);
+	void goToLaunchScene (){
+        SceneManager.LoadSceneAsync("LaunchScene");
 
-    }
+	}
 
     IEnumerator playSound()
     {

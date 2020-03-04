@@ -89,14 +89,16 @@ public class RocketPig : MonoBehaviour
 
         void stopFlying()
         {
+            int totalScore;
+            totalScore = PlayGameScene.fuelCounter +PlayGameScene.starCounter;
             
             die = true;
             //update high score
-            if (PlayGameScene.starCounter > PlayerPrefs.GetInt("highscore"))
+            if (totalScore> PlayerPrefs.GetInt("highscore"))
             {
-                PlayerPrefs.SetInt("highscore", PlayGameScene.starCounter);
-                bestScore.text = PlayGameScene.starCounter.ToString();
-                Leaderboards.RocketPigHighScore.SubmitScore(PlayGameScene.starCounter);
+                PlayerPrefs.SetInt("highscore", totalScore);
+                bestScore.text = totalScore.ToString();
+                Leaderboards.RocketPigHighScore.SubmitScore(totalScore);
             }
 
             Invoke("destroyPig", 3);
@@ -112,7 +114,7 @@ public class RocketPig : MonoBehaviour
             //final scores on gameover screen
             //starsFinal.text = PlayGameScene.starCounter.ToString ("00");
             //fuelFinal.text = PlayGameScene.fuelCounter.ToString ("00");
-            totalCounter.text = PlayGameScene.starCounter.ToString();
+            totalCounter.text = totalScore.ToString();
 
 
 
