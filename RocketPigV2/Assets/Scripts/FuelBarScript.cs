@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class FuelBarScript : MonoBehaviour
 {
     [SerializeField]
@@ -43,7 +44,6 @@ public class FuelBarScript : MonoBehaviour
             fuelstart = (float)PlayGameScene.fuelCounter;
             PlayGameScene.startTime = Time.time;
             fuelWarningText.SetActive(false);
-            fuelAnimator.SetTrigger("FuelAmple");
             rainbowObj.SetActive(true);
         }
         if (!RocketPig.rainbowSequenceOn){
@@ -64,7 +64,8 @@ public class FuelBarScript : MonoBehaviour
             if (fuelPresent > 0.15f)
             {
                 // GuitarFall.spawnedGuitarOnce = false;
-                fuelAnimator.SetTrigger("FuelAmple");
+                // fuelAnimator.SetTrigger("FuelAmple");
+                fuelAnimator.SetBool("FuelAmpleBool", true);
                 GuitarFall.spawnedGuitarOnce = false;
                 PlayPageOptions.normalMainMusic();
                 fuelWarningText.SetActive(false);
@@ -73,10 +74,12 @@ public class FuelBarScript : MonoBehaviour
 
             if (fuelPresent < 0.15f && !GuitarFall.spawnedGuitarOnce && !RocketPig.rainbowSequenceOn)
             {
-                fuelAnimator.SetTrigger("FuelBarLow");
+                // fuelAnimator.SetTrigger("FuelBarLow");
+
                 float randomDelay = Random.Range(0f, 5f);
                 Invoke("spawnGuitarPower", randomDelay);
                 GuitarFall.spawnedGuitarOnce = true;
+                fuelAnimator.SetBool("FuelAmpleBool", false);
 
                 PlayPageOptions.speedUpMainMusic();
                 fuelWarningText.SetActive(true);

@@ -175,7 +175,8 @@ public class RocketPig : MonoBehaviour
         }
         if (col.gameObject.name == "guitar(Clone)" && !die)
         {
-            // PlayPageOptions.playStarCatchSound();
+            doneInvincible();
+            doneMagnetic();
             PlayPageOptions.pauseMainMusic();
             Destroy(col.gameObject);
             rainbowAnimator.SetTrigger("ShowRainbow");
