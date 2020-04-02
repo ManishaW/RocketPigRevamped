@@ -99,10 +99,10 @@ public class CometFall : MonoBehaviour
         }
         // yield return new WaitForSeconds(delay);
 
-        float scale = Random.Range(2.0f, 2.8f);
+        float scale = Random.Range(2.0f, 3.0f);
         newComet = Instantiate(cometToSpawn, position, Quaternion.identity) as GameObject;
         newComet.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
-        newComet.GetComponent<Rigidbody2D>().velocity = new Vector3(0, Random.Range(-40, -35), 0);
+        newComet.GetComponent<Rigidbody2D>().velocity = new Vector3(0, Random.Range(-60, -50), 0);
         newComet.transform.localScale = new Vector3(scale, scale, 0);
         // newComet.transform.Rotate(0f, 0f, Random.Range(0f, 180f));
 

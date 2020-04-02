@@ -8,7 +8,7 @@ public class PreloaderScene : MonoBehaviour
 {
 	private CanvasGroup fadeGroup;
 	private float loadTime;
-	private float minimumLogoTime = 2.0f;
+	private float minimumLogoTime = 1.7f;
 
 
 	// Use this for initialization

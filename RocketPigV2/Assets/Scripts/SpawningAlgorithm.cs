@@ -54,14 +54,11 @@ public class SpawningAlgorithm : MonoBehaviour
         if (timeInAir>30){
             challengeMode =(int)Random.Range(13,20);
             Debug.Log("Hard ");
-        }else if (timeInAir>20){
+        }else{
             challengeMode =(int)Random.Range(7,13);
 
             Debug.Log("Medium ");
-        }else{
-           challengeMode =(int)Random.Range(3,6);
         }
-
         for (int i=0;i<challengeMode;i++){
             int row= (int)Random.Range(0,4);
             int col= (int)Random.Range(0,5);
