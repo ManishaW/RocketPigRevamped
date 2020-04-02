@@ -1,20 +1,11 @@
 _____________________________________________________________________________________
-# ROCKET PIG V2
+# ROCKET PIG V2 - Coming Soon to the Google Play Store
 Wannibe Studios
 _____________________________________________________________________________________
 
 CONTENTS
 1. About the game
 2. System Requirements
-3. Controls
-  a) Fueling up
-  b) Tilt to catch stars, power ups and avoid comets 
-  c) Swipe to move satelites out of the way (Coming soon)
-4. Gifts (Coming soon)
-5. Collection (Coming soon)
-6. Settings (Coming Soon)
-7. About the Creators
-
 
 _____________________________________________________________________________________
 1) ABOUT
