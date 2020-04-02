@@ -1,14 +1,8 @@
 _____________________________________________________________________________________
-# ROCKET PIG V2 - Coming Soon to the Google Play Store
-Wannibe Studios
-_____________________________________________________________________________________
-
-CONTENTS
-1. About the game
-2. System Requirements
+# ROCKET PIG V2
 
 _____________________________________________________________________________________
-1) ABOUT
+ABOUT
 __________________
 Rocket Pig is a casual game that you can play on your android device. Try to get the high score by fueling up as fast as you can, collecting stars and powering up! Be sure to dodge all the comets!
 
@@ -16,7 +10,3 @@ Rocket Pig is a casual game that you can play on your android device. Try to get
 
 _____________________________________________________________________________________
 
-2) SYSTEM REQUIREMENTS
-__________________
-Platform: Android
-_____________________________________________________________________________________
