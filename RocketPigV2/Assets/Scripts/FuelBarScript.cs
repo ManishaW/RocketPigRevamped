@@ -63,8 +63,7 @@ public class FuelBarScript : MonoBehaviour
 
             if (fuelPresent > 0.15f)
             {
-                // GuitarFall.spawnedGuitarOnce = false;
-                // fuelAnimator.SetTrigger("FuelAmple");
+              
                 fuelAnimator.SetBool("FuelAmpleBool", true);
                 GuitarFall.spawnedGuitarOnce = false;
                 PlayPageOptions.normalMainMusic();
@@ -80,7 +79,6 @@ public class FuelBarScript : MonoBehaviour
                 Invoke("spawnGuitarPower", randomDelay);
                 GuitarFall.spawnedGuitarOnce = true;
                 fuelAnimator.SetBool("FuelAmpleBool", false);
-
                 PlayPageOptions.speedUpMainMusic();
                 fuelWarningText.SetActive(true);
             }

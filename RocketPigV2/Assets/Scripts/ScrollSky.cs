@@ -16,7 +16,7 @@ public class ScrollSky : MonoBehaviour {
 		// if (PlayGameScene.blastOffTriggered == true && RocketPig.die==false) {
 			//speed that sky is scrolling
 			if (PlayGameScene.blastOffTriggered && !RocketPig.die){
-    			StartCoroutine(startMovingSky(1.3f));
+    			StartCoroutine(startMovingSky(0f));
 
 
 			}
@@ -34,7 +34,7 @@ public class ScrollSky : MonoBehaviour {
 		speed += 3 * Time.deltaTime;
 		Mathf.Clamp (speed, 0f, 0.7f);
 		// speed=0.65f;
-		speed=0.65f;
+		speed=0.68f;
 
 		Vector2 bgPos = new Vector2 (0, Time.time * speed);
 		GetComponent<Renderer> ().material.mainTextureOffset = bgPos;

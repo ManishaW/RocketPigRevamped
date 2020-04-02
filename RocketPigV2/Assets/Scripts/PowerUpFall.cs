@@ -13,7 +13,7 @@ public class PowerUpFall : MonoBehaviour {
 	GameObject spawnPowerUpNew;
 	// Use this for initialization
 	void Start () {
-		float randoTime = Random.Range(5,10);
+		float randoTime = Random.Range(7,12);
 		InvokeRepeating ("makePowerUp", 10f, randoTime);
 
 	}
@@ -39,7 +39,7 @@ public class PowerUpFall : MonoBehaviour {
 			Vector3 position = new Vector3 (Random.Range (-350, 350), 800, 0);		
 			spawnPowerUpNew = Instantiate (spawnPowerUp, position, Quaternion.identity) as GameObject;
 			spawnPowerUpNew.transform.SetParent (GameObject.FindGameObjectWithTag ("Canvas").transform, false);
-			spawnPowerUpNew.GetComponent<Rigidbody2D>().velocity = new Vector3(0,-30,0);
+			spawnPowerUpNew.GetComponent<Rigidbody2D>().velocity = new Vector3(0,-28,0);
 
 		}
 	}

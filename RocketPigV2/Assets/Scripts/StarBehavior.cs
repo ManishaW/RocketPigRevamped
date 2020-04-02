@@ -23,7 +23,7 @@ public class StarBehavior : MonoBehaviour
         if (flyToPig && !RocketPig.die)
         {
             rpDirection = -(transform.position - piggy.transform.position).normalized;
-            rb.velocity = new Vector2(rpDirection.x, rpDirection.y) * 130f * (Time.time / timeStamp);
+            rb.velocity = new Vector2(rpDirection.x, rpDirection.y) * 100f * (Time.time / timeStamp);
         }
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -31,11 +31,10 @@ public class StarBehavior : MonoBehaviour
         if (col.gameObject.name == "MagnetRadius" && RocketPig.magnetic)
         {
             timeStamp = Time.time;
-            //     	Debug.Log(RocketPig.magnetic);
-            // Debug.Log("ehehhehe");
             piggy = GameObject.Find("Pig");
             flyToPig = true;
-        }
+        } 
+       
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -48,5 +47,6 @@ public class StarBehavior : MonoBehaviour
             piggy = GameObject.Find("Pig");
             flyToPig = true;
         }
+     
     }
 }

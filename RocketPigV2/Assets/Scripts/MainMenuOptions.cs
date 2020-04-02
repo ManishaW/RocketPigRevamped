@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+using UnityEngine.Advertisements;
 
 public class MainMenuOptions : MonoBehaviour
 {
+    //ads
+    string gameId = "3467018";
+    bool testMode = true;
 
     public static AudioSource[] allAudio;
     public static AudioSource BGM;
     public static AudioSource soundClick;
-    // public static AudioSource playGameMusic;
-    // public static AudioSource starCaught;
-    // public static AudioSource fuelWarning;
     public static AudioSource signDisappearSound;
     public static AudioSource rocketLauncherBuild;
     public static AudioSource squeak;
@@ -35,6 +35,7 @@ public class MainMenuOptions : MonoBehaviour
     }
     void Start()
     {
+        // Advertisement.Initialize (gameId, testMode);
         allAudio = GetComponents<AudioSource>();
         BGM = allAudio[0];
         soundClick = allAudio[1];
@@ -97,8 +98,8 @@ public class MainMenuOptions : MonoBehaviour
     {
       
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
+        // if (Input.GetKeyDown(KeyCode.Escape))
+        //     Application.Quit();
 
     }
 

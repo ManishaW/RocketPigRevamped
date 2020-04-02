@@ -67,6 +67,12 @@ public class GameOverOptions : MonoBehaviour
         SceneManager.LoadScene("LaunchScene");
         RocketPig.die = false;
         PlayGameScene.blastOffTriggered = false;
+        PreloadScript.countRetryTimes = PreloadScript.countRetryTimes+1;
+        // Debug.Log(PreloadScript.countRetryTimes);
+
+        // if (PreloadScript.countRetryTimes!=0 && PreloadScript.countRetryTimes%3==0){
+        //     Adcaller.showVideoAd();
+        // }
     }
 
 
@@ -76,6 +82,7 @@ public class GameOverOptions : MonoBehaviour
         SceneManager.LoadScene("Main menu");
         RocketPig.die = false;
         Time.timeScale = 1;
+        // PreloadScript.isFirstLoadMainMenu =false;
 
     }
 

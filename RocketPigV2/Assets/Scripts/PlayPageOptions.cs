@@ -18,6 +18,7 @@ public class PlayPageOptions : MonoBehaviour
     public static AudioSource zap;
     public static AudioSource click1Sound;
     public static AudioSource click2Sound;
+    public static AudioSource countdownSound;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class PlayPageOptions : MonoBehaviour
         zap = allAudio[10];
         click1Sound = allAudio[11];
         click2Sound = allAudio[12];
+        countdownSound = allAudio[13];
         // var test = PlayerPrefs.GetInt("muteBgMusic");
         // Debug.Log(test);
         if (PlayerPrefs.GetInt("muteBgMusic") == 1)
@@ -54,6 +56,7 @@ public class PlayPageOptions : MonoBehaviour
             dizzySound.mute = true;
             fairyDustSound.mute = true;
             zap.mute = true;
+            countdownSound.mute = true;
 
         }
 
@@ -110,11 +113,13 @@ public class PlayPageOptions : MonoBehaviour
         mainMusic.Play();
 
     }
-    public static void speedUpMainMusic(){
+    public static void speedUpMainMusic()
+    {
         mainMusic.pitch = 1.1f;
     }
 
-    public static void normalMainMusic(){
+    public static void normalMainMusic()
+    {
         mainMusic.pitch = 1.0f;
     }
     public static void playRainbowEntersSound()
@@ -124,6 +129,10 @@ public class PlayPageOptions : MonoBehaviour
     public static void playZapTapSound()
     {
         zap.Play();
+    }
+    public static void playCountdownSound()
+    {
+        countdownSound.Play();
     }
 
 }

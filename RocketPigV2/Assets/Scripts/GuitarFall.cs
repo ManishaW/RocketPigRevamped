@@ -33,9 +33,9 @@ public class GuitarFall : MonoBehaviour
 
     public void makeGuitar()
     {
-        Vector3 position = new Vector3(Random.Range(-350, 350), 800, 0);
+        Vector3 position = new Vector3(Random.Range(-325, 325), 800, 0);
         newGuitar = Instantiate(guitar, position, Quaternion.identity) as GameObject;
         newGuitar.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
-        newGuitar.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -40, 0);
+        newGuitar.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -30, 0);
     }
 }

@@ -23,12 +23,15 @@ public class RocketPig : MonoBehaviour
     public GameObject rainbowBkgd;
     public GameObject guitar;
     public GameObject RockItPigText;
+    public GameObject NewHighscore;
     public static bool rainbowSequenceOn = false;
     public static bool musicNoteShower = false;
     public static bool diedByCollision = false;
     float initTiltedPosition;
     float fuelAtRainbowBegins;
     float fuelAtRainbowEnds;
+    bool newHighscoreReached;
+    DeviceOrientation orient ;
     void Awake()
     {
         immuneAnimator = immuneBubble.GetComponent<Animator>();
@@ -38,6 +41,8 @@ public class RocketPig : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // orient = Input.deviceOrientation;
+        // Debug.Log(orient);
         pig = GameObject.Find("Pig");
         upwardForce = pig.GetComponent<Rigidbody2D>();
         die = false;
@@ -47,14 +52,12 @@ public class RocketPig : MonoBehaviour
         rainbowSequenceOn = false;
         musicNoteShower = false;
         diedByCollision = false;
-
-
+        newHighscoreReached =false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //screen edges:
         float dist = (pig.transform.position - Camera.main.transform.position).z;
         float leftBorder = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, dist)).x;
         float rightBorder = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, dist)).x;
@@ -62,7 +65,15 @@ public class RocketPig : MonoBehaviour
         //make pig fly when blastOff was triggered (in PlaySceneScene)
         if (PlayGameScene.blastOffTriggered && Time.timeScale!=0)
         {
-            transform.Translate(Input.acceleration.x * 2.5f, 0, 0);
+            if (orient == DeviceOrientation.LandscapeLeft){
+                transform.Translate(Input.acceleration.z * -2f, 0, 0);
+            }else if (orient == DeviceOrientation.LandscapeRight){
+                transform.Translate(Input.acceleration.z * 2f, 0, 0);
+            }else{
+                transform.Translate(Input.acceleration.x * 2f, 0, 0);
+            }
+            // transform.Translate(dir.y * 2.5f,0,0);
+
         }
         if (FuelBarScript.fuelout == true)
         {
@@ -95,7 +106,10 @@ public class RocketPig : MonoBehaviour
         // 	//trigger animation saying: new highscore!
 
         // }
-
+        if (PlayGameScene.totalScoreFinal> PlayerPrefs.GetInt("highscore2")&&!newHighscoreReached){
+            NewHighscore.SetActive(true);
+            newHighscoreReached =true;
+        }
     }
 
     void stopFlying()
@@ -173,7 +187,7 @@ public class RocketPig : MonoBehaviour
             magnetic = true;
 
         }
-        if (col.gameObject.name == "guitar(Clone)" && !die)
+        if (col.gameObject.name == "DiamondPowerUp(Clone)" && !die)
         {
             doneInvincible();
             doneMagnetic();

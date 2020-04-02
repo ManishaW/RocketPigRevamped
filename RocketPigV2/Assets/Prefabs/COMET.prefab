@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 111736217151997530}
   - component: {fileID: 61818130149818600}
   - component: {fileID: 2152181074647295980}
+  - component: {fileID: 4787429469948748552}
   m_Layer: 0
   m_Name: COMET
   m_TagString: Comet
@@ -105,7 +106,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459144663182678}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 71a9f65884efb24479361d5872f45112, type: 2}
   m_Animations:
@@ -152,3 +153,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27909f8ee9394d747a8c6be4dd517bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4787429469948748552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459144663182678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed685115ca1ab64bbdc4d28f6aee160, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  maxRotation: 0

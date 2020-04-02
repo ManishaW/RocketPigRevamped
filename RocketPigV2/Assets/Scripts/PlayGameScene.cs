@@ -20,23 +20,27 @@ public class PlayGameScene : MonoBehaviour
     public bool startCountdownTrigger;
     public static bool blastOffTriggered;
     public static float startTime;
+    public static float blastTime;
     float countdownstarttime;
     float restseconds;
     public GameObject launchPad;
     public GameObject piggy;
-    public GameObject background;
+    // public GameObject background;
+    public GameObject tiltInstruction;
+    public GameObject blastOffText;
 
     Animator launchPadAnimator;
     Animator piggyAnimator;
-    Animator backgroundAnimator;
+    // Animator backgroundAnimator;
     // Animator boltAnimator;
     public GameObject tutorialCanvas;
+
     // public GameObject bolts;
 
     void Awake (){
         launchPadAnimator = launchPad.GetComponent<Animator>();
         piggyAnimator = piggy.GetComponent<Animator>();
-        backgroundAnimator= background.GetComponent<Animator>();
+        // backgroundAnimator= background.GetComponent<Animator>();
         
     }
 
@@ -78,10 +82,7 @@ public class PlayGameScene : MonoBehaviour
             PlayPageOptions.playZapTapSound();
         }
         //bolt animations
-        if (fuelCounter>0 && !blastOffTriggered){
-        }else if (fuelCounter>5){
-        }else if (fuelCounter>10){
-        }
+      
         //update the scores 
         starCounterScore.text = ((int)totalScoreFinal).ToString("00");
         fuelCounterScore.text = (fuelCounter).ToString("00");
@@ -91,16 +92,18 @@ public class PlayGameScene : MonoBehaviour
             CountdownTimer = CountdownTimer - Time.deltaTime;
             string displayTime = CountdownTimer.ToString("0");
             countdownText.text = displayTime;
+            countdownText.fontSize = 300;
         }
 
 
         //countdown is 0 and pig is not flying yet
         if (countdownText.text.Equals("0") && blastOffTriggered == false )
         {
-            countdownText.text = "BLAST OFF!";
+            countdownText.text = "";
+            blastOffText.SetActive(true);
             leftFinger.gameObject.SetActive(false);
             rightFinger.gameObject.SetActive(false);
-            countdownText.fontSize = 250;
+            
             //start flying
             Invoke("blastOff", 1.5f);
 
@@ -125,6 +128,8 @@ public class PlayGameScene : MonoBehaviour
             if (startCountdownTrigger == false)
             {
                 startCountdownTrigger = true;
+                PlayPageOptions.playCountdownSound();
+
             }
         }
     }
@@ -141,6 +146,8 @@ public class PlayGameScene : MonoBehaviour
             if (startCountdownTrigger == false)
             {
                 startCountdownTrigger = true;
+                PlayPageOptions.playCountdownSound();
+
 
             }
         }
@@ -156,10 +163,13 @@ public class PlayGameScene : MonoBehaviour
             countdownText.gameObject.SetActive(false);
             blastOffTriggered = true;
             startTime = Time.time;
+            blastTime=Time.time;
             launchPadAnimator.SetTrigger("LaunchPanelDisappear");
             piggyAnimator.SetTrigger("SetPiggyToNeutralPosition");
-            backgroundAnimator.SetTrigger("StartMovingSky");
+            // backgroundAnimator.SetTrigger("StartMovingSky");
             StartCoroutine(allowPigMovement());
+            CometFall.cueSpawning();
+            tiltInstruction.SetActive(true);
         }
     }
 

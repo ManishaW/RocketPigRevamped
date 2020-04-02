@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3340218030147925507}
   - component: {fileID: 6879641445862939302}
   - component: {fileID: 3227510633399557548}
+  - component: {fileID: -6173157191972977018}
   m_Layer: 0
   m_Name: musicNote5
   m_TagString: MusicNote
@@ -149,3 +150,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6173157191972977018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841366837839675309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27909f8ee9394d747a8c6be4dd517bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
