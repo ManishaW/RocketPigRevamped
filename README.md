@@ -21,7 +21,7 @@ ________________________________________________________________________________
 __________________
 Rocket Pig is a casual game that you can play on your android device. Try to get the high score by fueling up as fast as you can, collecting stars and powering up! Be sure to dodge all the comets!
 
-<img src="https://github.com/ManishaW/RocketPigRevamped/Screenshots/91066824_517466465625644_757721665118404608_n (1).jpg" >
+<img src="https://github.com/ManishaW/RocketPigRevamped/Screenshots/allScreens.jpg" >
 _____________________________________________________________________________________
 
 2) SYSTEM REQUIREMENTS
