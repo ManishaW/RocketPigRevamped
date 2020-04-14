@@ -15,13 +15,18 @@ public class FuelBarScript : MonoBehaviour
     public GameObject fuelObj;
     public GameObject rainbowObj;
     public GameObject fuelWarningText;
+    public GameObject UFO;
+    public GameObject rainbowOrb;
     Animator fuelAnimator;
     float amount;
     public Text fuelCounterScore;
-
+    Rigidbody2D rg;
+    
     void Start()
     {
         fuelAnimator = fuelObj.GetComponent<Animator>();
+        GuitarFall.spawnedGuitarOnce = false;
+
     }
 
 
@@ -65,7 +70,7 @@ public class FuelBarScript : MonoBehaviour
             {
               
                 fuelAnimator.SetBool("FuelAmpleBool", true);
-                GuitarFall.spawnedGuitarOnce = false;
+                // GuitarFall.spawnedGuitarOnce = false;
                 PlayPageOptions.normalMainMusic();
                 fuelWarningText.SetActive(false);
 
@@ -73,21 +78,15 @@ public class FuelBarScript : MonoBehaviour
 
             if (fuelPresent < 0.15f && !GuitarFall.spawnedGuitarOnce && !RocketPig.rainbowSequenceOn)
             {
-                // fuelAnimator.SetTrigger("FuelBarLow");
-
-                float randomDelay = Random.Range(0f, 5f);
-                Invoke("spawnGuitarPower", randomDelay);
                 GuitarFall.spawnedGuitarOnce = true;
+                UFO.SetActive(true);
+                float rando = Random.Range(1.5f,3.7f);
+		        Invoke("makeOrbActive",rando);
                 fuelAnimator.SetBool("FuelAmpleBool", false);
                 PlayPageOptions.speedUpMainMusic();
                 fuelWarningText.SetActive(true);
             }
 
-
-            // if (RocketPig.rainbowSequenceOn)
-            // {
-            //     GuitarFall.spawnedGuitarOnce = false;
-            // }
 
             if (fuelPresent <= 0.01f)
             {
@@ -99,10 +98,14 @@ public class FuelBarScript : MonoBehaviour
         }
 
     }
-
-    void spawnGuitarPower()
-    {
-        GuitarFall.triggerGuitarSpawn();
+    
+    void makeOrbActive(){
+        Debug.Log("test here");
+        rainbowOrb.SetActive(true);
     }
+    // void spawnGuitarPower()
+    // {
+    //     GuitarFall.triggerGuitarSpawn();
+    // }
 }
 

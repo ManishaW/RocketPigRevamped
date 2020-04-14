@@ -7,11 +7,12 @@ public class DestroySpawnInstance : MonoBehaviour
 
     void Start()
     {
+       
 
     }
     void Update()
     {
-        if (RocketPig.rainbowSequenceOn && this.gameObject.tag !="MusicNote"){
+        if (RocketPig.rainbowSequenceOn && this.gameObject.name !="heartFuelUp(Clone)"){
             Destroy(this.gameObject);
         }
          if (RocketPig.die){

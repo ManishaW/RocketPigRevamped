@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 using CloudOnce;
-
+using System;
 public class GameOverOptions : MonoBehaviour
 {
     public Canvas gameoverCanvas;
@@ -43,7 +43,7 @@ public class GameOverOptions : MonoBehaviour
             if (totalScore > PlayerPrefs.GetInt("highscore2"))
             {
                 PlayerPrefs.SetInt("highscore2", totalScore);
-                Leaderboards.RocketPigHighScore.SubmitScore(totalScore);
+                
             }
 			bestScore.text = PlayerPrefs.GetInt("highscore2").ToString("00");
             scoreFinal.text = totalScore.ToString("00");
@@ -58,6 +58,17 @@ public class GameOverOptions : MonoBehaviour
         mainCanvas.gameObject.SetActive(false);
         overlayCanvas.gameObject.SetActive(false);
         PlayPageOptions.normalMainMusic();
+        try
+        {
+			int totalScore = (int)PlayGameScene.totalScoreFinal;
+            Leaderboards.RocketPigHighScore.SubmitScore(totalScore);
+            Debug.Log("submit to leaderboard");
+        }
+        catch (Exception e)
+        {
+            Debug.Log("cannot submit to leaderboard");
+
+        }
 
     }
 

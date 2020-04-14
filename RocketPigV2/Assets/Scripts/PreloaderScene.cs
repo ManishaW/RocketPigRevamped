@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using CloudOnce;
 
 public class PreloaderScene : MonoBehaviour
 {
 	private CanvasGroup fadeGroup;
 	private float loadTime;
-	private float minimumLogoTime = 1.7f;
+	private float minimumLogoTime = 1f;
 
-
+	void Awake(){
+	}
 	// Use this for initialization
 	void Start ()
 	{

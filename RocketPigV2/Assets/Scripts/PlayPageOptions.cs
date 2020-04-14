@@ -57,6 +57,8 @@ public class PlayPageOptions : MonoBehaviour
             fairyDustSound.mute = true;
             zap.mute = true;
             countdownSound.mute = true;
+            click1Sound.mute = true;
+            click2Sound.mute=true;
 
         }
 

@@ -36,7 +36,7 @@ public class CometFall : MonoBehaviour
     void test2()
     {
         // InvokeRepeating("test", 0.5f, 3.5f);
-        InvokeRepeating("test", 0.5f, 5f);
+        InvokeRepeating("test", 0.3f,3.2f);
     }
     void test()
     {
@@ -46,7 +46,7 @@ public class CometFall : MonoBehaviour
         for (int y = 0; y < 5; y++)
         {
            
-            StartCoroutine(startPhysicalSpawning(y, 1.5f + (1f * y)));
+            StartCoroutine(startPhysicalSpawning(y, 1.5f + (0.6f * y)));
             
         }
 
@@ -102,7 +102,28 @@ public class CometFall : MonoBehaviour
         float scale = Random.Range(2.0f, 3.0f);
         newComet = Instantiate(cometToSpawn, position, Quaternion.identity) as GameObject;
         newComet.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
-        newComet.GetComponent<Rigidbody2D>().velocity = new Vector3(0, Random.Range(-60, -50), 0);
+        // Debug.Log((Time.time-PlayGameScene.blastTime)/30);
+        float timeSinceBlast = (Time.time-PlayGameScene.blastTime);
+        // float speed1=-55;
+        // float speed2=-50;
+        // if (timeSinceBlast>25){
+        //     Debug.Log("Hard Comet speed");
+        //     speed1 = -130;
+        //     speed2 = -90;
+        // }else if (timeSinceBlast>15){
+        //     Debug.Log("Medium Comet speed");
+        //     speed1 = -70;
+        //     speed2 = -65;
+        // }
+        // else if (timeSinceBlast>0){
+        //     Debug.Log("Easy Comet speed");
+        //     speed1 = -55;
+        //     speed2 = -50;
+        // }
+        // Debug.Log(timeSinceBlast);
+
+        // if (Time.time - PlayGameScene.blastTime>)
+        newComet.GetComponent<Rigidbody2D>().velocity = new Vector3(0, Random.Range(-65,-60), 0);
         newComet.transform.localScale = new Vector3(scale, scale, 0);
         // newComet.transform.Rotate(0f, 0f, Random.Range(0f, 180f));
 

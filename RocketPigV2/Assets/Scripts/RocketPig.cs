@@ -66,11 +66,11 @@ public class RocketPig : MonoBehaviour
         if (PlayGameScene.blastOffTriggered && Time.timeScale!=0)
         {
             if (orient == DeviceOrientation.LandscapeLeft){
-                transform.Translate(Input.acceleration.z * -2f, 0, 0);
+                transform.Translate(Input.acceleration.z * -2.5f, 0, 0);
             }else if (orient == DeviceOrientation.LandscapeRight){
-                transform.Translate(Input.acceleration.z * 2f, 0, 0);
+                transform.Translate(Input.acceleration.z * 2.5f, 0, 0);
             }else{
-                transform.Translate(Input.acceleration.x * 2f, 0, 0);
+                transform.Translate(Input.acceleration.x * 2.5f, 0, 0);
             }
             // transform.Translate(dir.y * 2.5f,0,0);
 
@@ -187,7 +187,7 @@ public class RocketPig : MonoBehaviour
             magnetic = true;
 
         }
-        if (col.gameObject.name == "DiamondPowerUp(Clone)" && !die)
+        if (col.gameObject.name == "RainbowOrb(Clone)" && !die)
         {
             doneInvincible();
             doneMagnetic();
@@ -203,13 +203,20 @@ public class RocketPig : MonoBehaviour
             Invoke("doneRainbowSequence", 12);
             Invoke("doneMusicNoteShower", 8);
         }
-        if ((col.gameObject.name == "musicNote1(Clone)" || col.gameObject.name == "musicNote2(Clone)" || col.gameObject.name == "musicNote3(Clone)" || col.gameObject.name == "musicNote4(Clone)" || col.gameObject.name == "musicNote5(Clone)" || col.gameObject.name == "musicNote6(Clone)" || col.gameObject.name == "musicNote7(Clone)") && !die)
-        {
-            Destroy(col.gameObject);
-            PlayGameScene.fuelCounter = PlayGameScene.fuelCounter+0.5f;
-            PlayGameScene.totalScoreFinal +=1;
+        //could have done this better by using a tag >.> 
+        // if ((col.gameObject.name == "musicNote1(Clone)" || col.gameObject.name == "musicNote2(Clone)" || col.gameObject.name == "musicNote3(Clone)" || col.gameObject.name == "musicNote4(Clone)" || col.gameObject.name == "musicNote5(Clone)" || col.gameObject.name == "musicNote6(Clone)" || col.gameObject.name == "musicNote7(Clone)") && !die)
+        // {
+        //     Destroy(col.gameObject);
+        //     PlayGameScene.fuelCounter = PlayGameScene.fuelCounter+0.5f;
+        //     PlayGameScene.totalScoreFinal +=1;
 
+        // }
+        if (col.gameObject.name == "heartFuelUp(Clone)"||col.gameObject.name == "starFuelUp(Clone)"){
+            Destroy(col.gameObject);
+            PlayGameScene.fuelCounter = PlayGameScene.fuelCounter+0.25f;
+            PlayGameScene.totalScoreFinal +=0.5f; //hmmm
         }
+
     }
 
     void doneMagnetic()

@@ -56,7 +56,6 @@ public class SpawningAlgorithm : MonoBehaviour
             Debug.Log("Hard ");
         }else{
             challengeMode =(int)Random.Range(7,13);
-
             Debug.Log("Medium ");
         }
         for (int i=0;i<challengeMode;i++){

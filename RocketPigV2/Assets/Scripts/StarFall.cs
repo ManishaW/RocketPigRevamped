@@ -9,7 +9,7 @@ public class StarFall : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		float randoTime = Random.Range (0.7f, 1.5f);
+		float randoTime = Random.Range (0.7f, 1.3f);
 		InvokeRepeating ("makeStar", 5f, randoTime);
 
 	}
@@ -31,7 +31,7 @@ public class StarFall : MonoBehaviour {
 			Vector3 position = new Vector3 (Random.Range (-350, 350), 800, 0);
 			newStar = Instantiate (star, position, Quaternion.identity) as GameObject;
 			newStar.transform.SetParent (GameObject.FindGameObjectWithTag ("Canvas").transform, false);
-			newStar.GetComponent<Rigidbody2D>().velocity = new Vector3(0,-38,0);
+			newStar.GetComponent<Rigidbody2D>().velocity = new Vector3(0,-30,0);
 		}
 	}
 }
